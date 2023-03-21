@@ -1,0 +1,218 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./../style/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        script(src="./../script/index.js", defer)
+        title My Portfolio
+    body
+        .container
+            .header
+            .container-main
+                .container-profile
+                    .hero-banner
+                        .hero-banner_title(aria-hidden="true") Dallan Linnell
+                        .hero-banner_fixed
+                            .hero-banner_fixed-left
+                                .hero-banner_image
+                            .hero-banner_fixed-right
+                        h1.hero-banner_title.hero-banner_stroked-title Dallan Linnell
+                .container-projects
+                    .project
+                        #bitburner_tab.tab-background
+                            .project-tab View Scripts
+                        a#bitburner.project-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
+                            #bitburner_hover
+                            .project-trans-box
+                                #rain_box
+                                p#bitburner_title.project-title Bitburner Scripts
+                        a#bitburner_code.code-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #fullpage_tab.tab-background
+                            .project-tab View Project
+                        a#fullpage.project-link(href="https://deelinnell.github.io/fullpage-fantasy-website/", target="_blank")
+                            - for (let i = 0; i < 11; i++)
+                                .width-cell
+                            #fullpage_trans_box.project-trans-box
+                                #dragon_head
+                                #dragon_gradient
+                                #fire_box
+                                    svg#fire_container(height="100px", width="580px")
+                                        defs
+                                            radialGradient#fire_gradient(fx="23%")
+                                                stop(offset="10%", stop-color="rgb(255, 236, 207)")
+                                                stop(offset="50%", stop-color="rgb(255, 230, 0)")
+                                        path#fire_triangle
+                                p#fullpage_title_bottom.project-title Fullpage.js Site
+                                p#fullpage_title.project-title Fullpage.js Site
+                        a#fullpage_code.code-link(href="https://github.com/deelinnell/fullpage-fantasy-website", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #mobile_phone_tab.tab-background
+                            .project-tab View Project
+                        a#mobile_phone.project-link(href="https://responsive-business-website.vercel.app/", target="_blank")
+                            #mobile_trans.project-trans-box
+                                #mobile_background
+                                p#mobile_phone_title_1.project-title Mobile Phone Site
+                                p#mobile_phone_title_2.project-title Mobile Phone Site
+                                p#mobile_phone_title_3.project-title Mobile Phone Site
+                                p#mobile_phone_title_4.project-title Mobile Phone Site
+                                p#mobile_phone_title.project-title Mobile Phone Site
+                                #cracked_glass
+                        a#mobile_phone_code.code-link(href="https://github.com/deelinnell/responsive-business-website", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #solitaire_tab.tab-background
+                            .project-tab View Project
+                        a#solitaire.project-link(href="https://deelinnell.github.io/solitaire/", target="_blank")
+                            #solitaire_suit_grid
+                                - for (let i = 0; i < 10; i++)
+                                    .solitaire-suit-cell
+                            .solitaire-background
+                            #card-5.small-card
+                            #card-3.small-card
+                            #card-1.small-card
+                                p ♥
+                            #card-6.small-card
+                            #card-4.small-card
+                            #card-2.small-card
+                                p ♣
+                            #solitaire_trans.project-trans-box
+                                #solitaire_suits
+                                p#solitaire_title.project-title Solitaire
+                                .reflextion Solitaire
+                        a#solitaire_code.code-link(href="https://github.com/deelinnell/solitaire", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #card_maker_tab.tab-background
+                            .project-tab View Project
+                        a#card_maker.project-link(href="https://deelinnell.github.io/pokemon-card-maker/", target="_blank")
+                            #card_maker_trans.project-trans-box
+                                p#card_maker_title.project-title Card Maker
+                                .card_maker_background
+                                    - const rainDrops = 75
+                                    #cloud_rain_box
+                                        - for (let r = 0; r < rainDrops; r++)
+                                            svg.rain(style=`--x: ${Math.floor(Math.random() * 95)}; --t: ${Math.floor(Math.random() * 25)}; --a: ${Math.random() + 0.5}; --s: ${Math.random()};`)
+                                                defs
+                                                    linearGradient#rain_gradient(gradientTransform="rotate(90)")
+                                                        stop(offset="30%", stop-color="hsla(189, 27%, 44%, 0.1)")
+                                                        stop(offset="90%", stop-color="hsla(189, 27%, 44%, 0.3)")
+                                                path.rain-drop(d="M15 3 Q16.5 6.8 20 25 A2.8 2.8 0 1 1 10 26 Q13.5 6.8 15 3z")
+                                    #cloud_1
+                                    #cloud_2
+                                    p#card_maker_title_2.project-title Card Maker
+                        a#card_maker_code.code-link(href="https://github.com/deelinnell/pokemon-card-maker", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #card_search_tab.tab-background
+                            .project-tab View Project
+                        a#card_search.project-link(href="https://deelinnell.github.io/pokemon-card-api-search/", target="_blank")
+                            #card_search_trans.project-trans-box
+                                #search_bar
+                                    #search_bar_input
+                                    #search_bar_button
+                                        i.fa.fa-search
+                                    p#card_search_title.project-title
+                        a#card_search_code.code-link(href="https://github.com/deelinnell/pokemon-card-api-search", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
+                        #talents_tab.tab-background
+                            .project-tab View Project
+                        a#talents.project-link(href="https://wow-talent-calculator-chi.vercel.app/", target="_blank")
+                            .project-trans-box
+                                #grid_1.talent-grid
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .empty
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .empty
+                                    .talent
+                                    .empty
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .empty
+                                    #line_1.line
+                                p#talents_title.project-title Talent Calculator
+                                p#talents_title_green.project-title Talent Calculator
+                                p#talents_title_gold.project-title Talent Calculator
+                                #grid_2.talent-grid
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .empty
+                                    .talent
+                                    .talent
+                                    .talent
+                                    .empty
+                                    .talent
+                                    .empty
+                                    .empty
+                                    .talent
+                                    .talent
+                                    .empty
+                                    #line_2.line
+                        a#talents_code.code-link(href="https://github.com/deelinnell/wow-talent-calculator", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+            .footer
