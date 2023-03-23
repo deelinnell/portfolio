@@ -25,25 +25,51 @@ a {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  padding-top: 30px;
+  z-index: 1;
+  background-color: black;
+  background-image: radial-gradient(rgba(17, 17, 17, 0.2549019608) 9px, transparent 10px), repeating-radial-gradient(rgba(17, 17, 17, 0.2549019608) 0, rgba(17, 17, 17, 0.2549019608) 4px, transparent 5px, transparent 20px, rgba(17, 17, 17, 0.2549019608) 21px, rgba(17, 17, 17, 0.2549019608) 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
 }
 
 .container-main {
   position: relative;
   display: flex;
   flex-direction: row;
-  max-width: 1500px;
-  min-width: 1280px;
+  padding-top: 20px;
+  min-width: 1200px;
+  max-width: 1400px;
+  background-color: black;
+  border-top: 8px dashed rgba(17, 17, 17, 0.6588235294);
+  border-right: 8px dashed rgba(17, 17, 17, 0.6588235294);
+  border-left: 8px dashed rgba(17, 17, 17, 0.6588235294);
+  border-radius: 20px 20px 0 0;
+}
+
+.header {
+  height: 0px;
 }
 
 .footer {
   position: relative;
   height: 200px;
-  border-top: 1px solid white;
+  border-top: 6px double #111;
+  background-color: #000;
+  z-index: 4;
 }
 
 .container-projects {
-  width: 60%;
+  width: 65%;
   margin-right: 20px;
+  z-index: 3;
+}
+
+.container-profile {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  z-index: 2;
 }
 
 .project {
@@ -113,6 +139,7 @@ a {
   clip-path: polygon(0% 0%, 100% 0%, 89% 100%, 0% 100%);
   transition: 0.3s;
   filter: grayscale(20%);
+  z-index: 300;
 }
 
 .project-link.hover {
@@ -394,23 +421,11 @@ a {
   background-clip: text;
 }
 
-/*** HEADER ***/
-.header {
-  height: 20px;
-}
-
 /* BIO */
-.container-profile {
-  position: relative;
-  width: 40%;
-  height: 100%;
-}
-
 .hero-banner {
   position: relative;
   width: 100%;
   height: 500px;
-  z-index: -1;
 }
 
 .hero-banner_title {
@@ -445,7 +460,8 @@ a {
 
 .hero-banner_image {
   position: absolute;
-  right: 0;
+  right: 50px;
+  top: 58px;
   width: 500px;
   height: 100%;
   transform: rotate(-10deg);
@@ -461,6 +477,25 @@ a {
 
 .hero-banner_fixed-right {
   width: 60%;
+}
+
+.fixed-border-container {
+  position: fixed;
+  width: 100%;
+}
+
+.fixed-border {
+  position: absolute;
+  border-radius: 25px 0 0 0;
+  height: 590px;
+  width: 110px;
+  left: -60px;
+  top: 60px;
+  transform: rotate(-10deg);
+  border-left: 8px dashed rgba(17, 17, 17, 0.6588235294);
+  border-top: 8px dashed rgba(17, 17, 17, 0.6588235294);
+  background-color: #000;
+  z-index: 1;
 }
 
 /* FULLPAGE */
@@ -1255,7 +1290,7 @@ a {
     transform: scaleX(1.015) scaleY(1.015) translate(-49.5%, -49.5%) rotate(0.5deg);
   }
   100% {
-    transform: scaleX(1.01) scaleY(1.01) translate(-49.5%, -49.5%) rotate(-0.5deg);
+    transform: scaleX(1.01) scaleY(1.01) translate(-50%, -50%) rotate(-0.5deg);
     border: 2px solid #999;
   }
 }
@@ -1654,7 +1689,7 @@ a {
   }
   72% {
     opacity: 0;
-    transform: translate(-24px, 7px);
+    transform: translate(25px, -6px);
   }
   73% {
     opacity: 1;
