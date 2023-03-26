@@ -358,6 +358,7 @@ a {
     position: relative;
     width: 100%;
     height: 500px;
+    z-index: 1;
 }
 
 .name-banner_front-end {
@@ -366,12 +367,15 @@ a {
         position: relative;
         bottom: -25px; 
         left: 31%;
-        font-size: 52pt;
-        font-family: 'Mr Dafoe';
-        color: white;
-        animation: rainbowText 8s infinite linear;
-        z-index: 5;
     }
+}
+
+.neon-text {
+    font-size: 52pt;
+    font-family: 'Mr Dafoe';
+    color: #fff;
+    animation: rainbowText 8s infinite linear;
+    z-index: 5;
 }
 
 @keyframes rainbowText {
@@ -383,16 +387,15 @@ a {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 .front-end_stroke,
 .front-end_title {
     position: absolute;
     font-family: 'Oswald';
-    font-size: 72pt;
+    font-size: 76pt;
     font-weight: bold;
     left: 20px;
     top: -35px;
-    letter-spacing: 0.03em;
     -webkit-text-stroke: 2px #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -403,11 +406,12 @@ a {
 }
 
 .front-end_title {
-    animation: rainbowShadow 8s infinite linear;
-    background-size: 220% 120%;
+    background-image: radial-gradient(closest-side, hsl(0, 100%, 50%) 10%, hsl(0, 100%, 80%) 30%, hsl(0, 100%, 95%) 45%,#fff 60%);
+    animation: rainbowShadow 8s infinite;
+    background-size: 260% 120%;
     background-position: 45% 12px;
     z-index: -1;
-    color: hsl(0, 100%, 50%);
+    color: hsl(0, 100%, 80%);
 }
 
 @keyframes rainbowShadow {
@@ -419,19 +423,32 @@ a {
 }
 
 .name-banner_title {
-    color: #fff;
     font-size: 100px;
     font-weight: 700;
     position: absolute;
     text-align: center;
-    font-family: 'Merriweather';
-    font-size: 72pt;
+    font-family: 'Oswald';
+    font-size: 90pt;
+    line-height: 105px;
     text-transform: uppercase;
-    line-height: 90px;
     transform: rotate(-4deg);
     width: 450px;
     right: 4%;
-    bottom: -25px;
+    bottom: -45px;
+}
+
+.name-banner_fill-title {
+    animation: rainbowShadowName 8s infinite;
+    background-image: linear-gradient(to top, hsl(0 * 10, 100%, 70%), hsl(0 * 10, 100%, 80%) 5%, white 25%, white 46%, hsl(0 * 10, 100%, 70%) 50%, hsl(0 * 10, 100%, 80%) 55%, white 70%, white 100%);
+    @include text-background;
+}
+
+@keyframes rainbowShadowName {
+    @for $c from 0 through 36 {
+        #{$c * 2.777%} { 
+            background-image: linear-gradient(to top, hsl($c * 10, 100%, 70%), hsl($c * 10, 100%, 80%) 5%, white 25%, white 46%, hsl($c * 10, 100%, 70%) 50%, hsl($c * 10, 100%, 80%) 55%, white 70%, white 100%);
+        }
+    }
 }
 
 .name-banner_stroked-title {
@@ -441,20 +458,33 @@ a {
     z-index: 4;
 }
 
-.name-banner_fixed {
+.name-banner h3 {
+    position: absolute;
+    top: 385px;
+    left: 150px;
+    transform: rotate(-4deg);
+}
+
+.name-banner_fixed-container {
+    @include flex;
     position: fixed;
-    display: flex;
-    flex-direction: row;
     top: 80px;
     left: 0;
     width: 100%;
+    z-index: 3;
+}
+
+.name-banner_fixed {
+    @include flex;
+    min-width: 1200px;
+    width: 1400px;
     height: 350px;
 }
 
 .name-banner_image {
     position: absolute;
-    right: 50px;
-    top: 58px;
+    left: -40px;
+    top: 57px;
     width: 500px;
     height: 100%;
     transform: rotate(-10deg);
@@ -467,6 +497,7 @@ a {
 .name-banner_fixed-left {
     position: relative;
     width: 40%;
+    height: 100%;
 }
 
 .name-banner_fixed-right {
@@ -490,6 +521,268 @@ a {
     border-top: 8px dashed #111111a8;
     background-color: #000;
     z-index: 1;
+}
+
+/* SMILEYS */
+
+.smiley-container-fixed {
+    @include flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.smiley-container {
+    position: relative;
+    min-width: 1200px;
+    width: 1400px;
+    height: 100%;
+    z-index: 999;
+
+}
+
+.smileyface {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	border-radius: 50px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	display: block;
+	background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 6px #fff, 0 0 16px hsl(0, 100%, 50%), 0 0 30px hsl(0, 100%, 50%);
+	animation: rainbowEyes 8s infinite;
+    transition: 1s;
+}
+	
+p.eyes {
+	width: 14px;
+	height: 22px;
+	background: #fff;
+	border-radius: 100px/160px;
+	-webkit-border-radius: 100px 160px;
+	-moz-border-radius: 100px/160px;
+	position: absolute;
+	top: 20px;
+    box-shadow: 0 0 6px #fff, 0 0 16px hsl(0, 100%, 50%), 0 0 30px hsl(0, 100%, 50%);
+	animation: rainbowEyes 8s infinite;
+}	
+
+@keyframes rainbowEyes {
+    @for $c from 0 through 36 {
+        #{$c * 2.777%} { 
+            box-shadow: 0 0 6px #fff, 0 0 16px hsl($c * 10, 100%, 50%), 0 0 30px hsl($c * 10, 100%, 50%); 
+        }
+    }
+}
+	
+p.eyes.lefteye {
+    left: 22px;
+}
+    
+p.eyes.righteye {
+    right: 22px;
+}
+		
+.smile {
+	width: 56px;
+	height: 20px;
+    border: 6px solid hsl(0, 100%, 85%);
+	border-top: none;
+	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+	border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	position: absolute;
+	bottom: 12px;
+	left: 15px;	
+    animation: rainbowSmile 8s infinite;
+}
+
+@keyframes rainbowSmile {
+    @for $c from 0 through 36 {
+        #{$c * 2.777%} { 
+            border: 6px solid hsl($c * 10, 100%, 85%);
+	        border-top: none;
+        }
+    }
+}
+
+.corner {
+	width: 8px;
+	height: 12px;
+	background: hsl(0, 100%, 85%);
+	border-radius: 100px/160px;
+	-webkit-border-radius: 100px 160px;
+	-moz-border-radius: 100px/160px;
+	position: absolute;
+	top: -6px;
+	-webkit-transform: rotate(65deg);
+	-moz-transform: rotate(65deg);
+    transform: rotate(65deg);
+	left: -9px;
+    animation: rainbowSmileCorners 8s infinite;
+}
+	
+.corner.right {
+    left: 44px;
+    -webkit-transform: rotate(-65deg);
+    -moz-transform: rotate(-65deg);	
+    transform: rotate(-65deg);	
+}
+
+@keyframes rainbowSmileCorners {
+    @for $c from 0 through 36 {
+        #{$c * 2.777%} { 
+            background: hsl($c * 10, 100%, 85%);
+        }
+    }
+}
+
+
+.smileyface.one {
+    top: 550px;
+    left: -150px;
+    transform: rotate(25deg);
+}
+
+.smileyface.one:hover {
+    transform: rotate(-360deg) scale(0.8);
+	background: #000;
+}
+
+.smileyface.one:hover ~ .smileyface.two {
+    transition-delay: 0.3s;
+    transform: rotate(180deg) scale(0.7);
+	background: #000;
+}
+
+.smileyface.one:hover ~ .smileyface.three {
+    transition-delay: 0.6s;
+    transform: rotate(360deg) scale(0.8);
+	background: #000;
+}
+
+.smileyface.one:hover ~ .smileyface.four {
+    transition-delay: 1s;
+    transform: rotate(90deg) scale(0.5);
+	background: #000;
+}
+
+.smileyface.two {
+    top: 750px;
+    left: -120px;
+    transform: rotate(-35deg) scale(0.6);
+}
+
+.smileyface.two:hover {
+    transform: rotate(720deg) scale(0.9);
+	background: #000;
+}
+
+.smileyface.three {
+    top: 135px;
+    left: -190px;
+    transform: rotate(15deg) scale(0.5);
+}
+
+.smileyface.four {
+    top: 0px;
+    left: -95px;
+    transform: rotate(-35deg) scale(0.6);
+}
+
+.smileyface.five {
+    top: 720px;
+    right: -135px;
+    transform: rotate(25deg) scale(1.2);
+}
+
+.smileyface.five:hover {
+    transform: rotate(0deg) scale(1.4);
+	background: #000;
+    border-radius: 15px;
+}
+
+.smileyface.five:hover ~ .smileyface.six {
+    transition-delay: 0.3s;
+    transform: rotate(32deg) scale(0.6);
+	background: #000;
+}
+
+.smileyface.five:hover ~ .smileyface.seven {
+    transition-delay: 0.6s;
+    transform: rotate(235deg) scale(0.8);
+	background: #000;
+}
+.smileyface.five:hover ~ .smileyface.eight {
+    transition-delay: 0.9s;
+    transform: rotate(335deg) scale(0.7);
+	background: #000;
+}
+
+.smileyface.six {
+    top: 450px;
+    right: -95px;
+    transform: rotate(-32deg) scale(0.8);
+}
+
+.smileyface.seven {
+    top: 200px;
+    right: -125px;
+    transform: rotate(35deg) scale(0.5);
+}
+
+.smileyface.eight {
+    top: 0px;
+    right: -95px;
+    transform: rotate(-35deg) scale(0.6);
+}
+
+.smiley-line_svg {
+    position: absolute;
+    animation: rainbowLines 8s infinite;
+}
+
+@keyframes rainbowLines {
+    @for $c from 0 through 36 {
+        #{$c * 2.777%} { 
+            filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px hsl($c * 10, 100%, 50%)) drop-shadow(0 0 6px hsl($c * 10, 100%, 50%));
+        }
+    }
+}
+
+.smiley-line_svg.one {
+    top: 590px;
+    left: -130px;
+}
+
+.smiley-line_svg.two {
+    top: 200px;
+    left: -160px;
+}
+
+.smiley-line_svg.three {
+    top: -10px;
+    left: -178px;
+}
+
+.smiley-line_svg.four {
+    top: 35px;
+    right: -114px;
+    transform: rotate(6deg);
+}
+
+.smiley-line_svg.five {
+    top: 215px;
+    right: -93px;
+    transform: scaleY(0.75) rotate(-5deg);
+}
+
+.smiley-line_path {
+    stroke: white;
+    stroke-width: 2px;
+    fill: none;
 }
 
 /* FULLPAGE */
