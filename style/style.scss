@@ -3,9 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 *, *::before, *::after {
-  padding: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: white;
 }
 
 @mixin flex {
@@ -31,6 +32,8 @@ body {
     margin: 0;
     background-color: black;
     color: white;
+    font-size: 8pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
@@ -125,6 +128,7 @@ a {
 }
 
 .footer-content_info h3 span {
+    font-size: 20pt;
     animation: rainbowText 8s infinite linear;
 }
 
@@ -136,10 +140,13 @@ a {
 .footer-content_info i {
     display: inline-block;
     width: 35px;
-    font-size: 24pt;
     margin: 5px;
     margin-left: 10px;
     animation: rainbowText 8s infinite linear;
+}
+
+.footer-content_info i::before {
+    font-size: 24pt;
 }
 
 .fa-github {
@@ -147,11 +154,12 @@ a {
 }
 
 .footer-content_info p {
-    display: inline;
     font-size: 12pt;
+    display: inline;
 }
 
 .footer-content_right p {
+    font-size: 12pt;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -360,17 +368,22 @@ a {
 }
 
 .project-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
     transition: 0.3s;
     -webkit-text-stroke: 1px #000;
 }
 
 .code-title {
+    font-family: 'Times New Roman', Times, serif;
     transition: 0.3s;
     -webkit-text-stroke: 1px #000;
     -webkit-text-fill-color: rgb(10, 134, 10);
 }
 
 .code-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
     position: absolute;
     transition: 0.3s;
 }
@@ -832,7 +845,6 @@ a {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 40pt;
     border-top: 2px solid white;
     z-index: 12;
 }
@@ -840,6 +852,7 @@ a {
 .arrow {
     animation: rainbowText 8s infinite;
     z-index: 12;
+    font-size: 40pt;
 }
 
 .profile-content_container {
@@ -947,7 +960,6 @@ a {
     bottom: -200px;
     left: 29%;
     color: white;
-    font-size: 32pt;
     animation: rainbowText 8s infinite;
 }
 
@@ -967,6 +979,11 @@ a {
     animation-iteration-count: 2;
     z-index: -1;
     animation-delay: 3s;
+}
+
+.profile-content_thumbs-up.open i:nth-child(3)::before,
+.profile-content_thumbs-up.open i:nth-child(1)::before {
+    font-size: 32pt;
 }
 
 @keyframes thumbs {
