@@ -546,6 +546,9 @@ a {
     opacity: 0;
     top: -230px;
   }
+  30% {
+    opacity: 0;
+  }
   100% {
     top: 0;
     opacity: 1;
@@ -4034,7 +4037,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(-3px, -21px);
+    transform: translate(-18px, -23px);
   }
   73% {
     opacity: 1;
