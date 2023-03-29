@@ -13,7 +13,7 @@ function rotateBorder() {
 }
 
 const rotatedBorder = document.querySelector('.fixed-border')
-const bannerImage = document.querySelector('.name-banner_image')
+const bannerImage = document.querySelector('.name-banner_image-container')
 const bannerPicture = document.querySelector('.name-banner_picture-container')
 const bubbleText = document.querySelector('.name-banner_speech')
 const profileContent = document.querySelector('.profile-content')

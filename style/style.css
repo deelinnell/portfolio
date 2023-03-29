@@ -978,6 +978,12 @@ a {
   animation: imageLoad 2s;
 }
 
+.name-banner_image-container.closed {
+  transform: rotate(0deg);
+  left: 30px;
+  top: 90px;
+}
+
 @keyframes imageLoad {
   0% {
     transform: rotate(0deg);
@@ -1114,12 +1120,6 @@ a {
     filter: hue-rotate(570deg) saturate(4) contrast(180%) invert(20%);
   }
 }
-.name-banner_image.closed {
-  transform: rotate(0deg);
-  left: 30px;
-  top: 90px;
-}
-
 .name-banner_picture-container {
   position: absolute;
   left: 60px;
@@ -3989,7 +3989,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(2px, -19px);
+    transform: translate(-10px, 7px);
   }
   73% {
     opacity: 1;
