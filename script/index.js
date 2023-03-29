@@ -14,7 +14,7 @@ function rotateBorder() {
 
 const rotatedBorder = document.querySelector('.fixed-border')
 const bannerImage = document.querySelector('.name-banner_image')
-const bannerPicture = document.querySelector('.name-banner_picture')
+const bannerPicture = document.querySelector('.name-banner_picture-container')
 const bubbleText = document.querySelector('.name-banner_speech')
 const profileContent = document.querySelector('.profile-content')
 const profileContentBox = document.querySelector('.profile-content_box')
@@ -47,13 +47,6 @@ function removeOpen() {
     profileContentBox.classList.remove('open')
     profileArrow.classList.remove('open')
     thumbsUp.classList.remove('open')
-}
-
-function animateImage() {
-    addClosed()
-    setTimeout(() => {
-        removeClosed()
-    }, "1")
 }
 
 animateImage()
