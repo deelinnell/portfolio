@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 *, *::before, *::after {
@@ -451,23 +450,23 @@ a {
 
 .name-banner_front-end {
     position: relative;
-    h2 {
-        position: relative;
-        bottom: -25px; 
-        left: 31%;
-    }
+    animation: nameFrontEndLoad 1s ease-in;
+    top: 0;
 }
 
-@keyframes nameBannerLoad {
+@keyframes nameFrontEndLoad {
     0% {
-        opacity: 0;
+        top: -230px;
     }
     100% {
-        opacity: 1;
+        top: 0;
     }
 }
 
 .neon-text {
+    position: relative;
+    bottom: -25px; 
+    left: 31%;
     font-size: 52pt;
     font-family: 'Mr Dafoe';
     color: #fff;
@@ -494,7 +493,6 @@ a {
     -webkit-text-stroke: 2px #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: nameBannerLoad 1s;
 }
 
 .front-end_stroke {
@@ -518,10 +516,32 @@ a {
     }
 }
 
+.name-banner_title-container {
+    position: absolute;
+    width: 450px;
+    height: 250px;
+    right: 4%;
+    bottom: 0px;
+    animation: nameBannerTitleLoad 2s ease-in;
+}
+
+@keyframes nameBannerTitleLoad {
+
+    0% {
+        opacity: 0;
+        bottom: 200px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .name-banner_title {
+    position: absolute;
+    top: 0;
+    left: 0;
     font-size: 100px;
     font-weight: 700;
-    position: absolute;
     text-align: center;
     font-family: 'Oswald';
     font-size: 90pt;
@@ -529,9 +549,6 @@ a {
     text-transform: uppercase;
     transform: rotate(-4deg);
     width: 450px;
-    right: 4%;
-    bottom: 35px;
-    animation: nameBannerLoad 1s;
 }
 
 .name-banner_fill-title {
