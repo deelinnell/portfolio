@@ -554,7 +554,7 @@ a {
     height: 350px;
 }
 
-.name-banner_image {
+.name-banner_image-container {
     position: absolute;
     left: -40px;
     top: 57px;
@@ -580,9 +580,12 @@ a {
     }
 }
 
-.name-banner_image img {
-    height: 100%;
+.name-banner_image {
     width: 100%;
+    height: 100%;
+    background-image: url('../img/forest.avif');
+    background-position: center;
+    background-size: cover;
     animation: rainbowTrees 8s infinite;
     filter: hue-rotate(210deg) saturate(4);
     border-radius: 25px;

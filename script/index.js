@@ -49,8 +49,6 @@ function removeOpen() {
     thumbsUp.classList.remove('open')
 }
 
-animateImage()
-
 //PROJECT HOVERS
 
 const projects = document.querySelectorAll('.project-link')
