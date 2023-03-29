@@ -75,6 +75,9 @@ html(lang="en")
                 .fixed-border-container
                     .fixed-border
                 .container-profile
+                    .under-image_text 
+                        p.lines ║
+                        p.lines ║
                     .name-banner
                         .name-banner_front-end
                             .front-end_title FRONT END
@@ -85,8 +88,36 @@ html(lang="en")
                             .name-banner_fixed
                                 .name-banner_fixed-left
                                     .name-banner_image
+                                    .name-banner_picture
+                                    .name-banner_speech.one
+                                        .bubble
+                                        p (:
                                 .name-banner_fixed-right
                         h1.name-banner_title.name-banner_stroked-title Dallan Linnell
+                    .profile-content_container
+                        .profile-content
+                            .profile-content_box
+                                p Hi, my name is Dallan. I'm a front end developer and these are some of the projects I've made. Check them out.
+                            .profile-content_arrow
+                                .profile-content_arrow_background
+                                span ⇮
+                                span ⇮
+                            .profile-content_thumbs-up
+                                i.fa.fa-thumbs-up
+                                .smiley-nine
+                                    .smileyface.nine
+                                        p.eyes.lefteye
+                                        p.eyes.righteye
+                                        .smile
+                                            .corner
+                                            .corner.right
+                                i.fa.fa-thumbs-up
+                            .name-banner_speech.two
+                                .bubble
+                                p ! ! !
+                    .arrows 
+                        p.arrow ⟱
+                        p.arrow ⟱
                 .container-projects
                     .project
                         #bitburner_tab.tab-background
@@ -284,4 +315,17 @@ html(lang="en")
                             .code-tab View Code
             .footer
                 .footer-top
+                    .footer-content
+                        .footer-content_left
+                            .footer-content_info
+                                h3 <span>⇓</span> <p>CONTACT</p> <span>⇓</span>
+                                h4
+                                    i.fa.fa-envelope 
+                                    p deelinnell@gmail.com
+                                h4
+                                    a(href="https://github.com/deelinnell", target="_blank")
+                                        i.fa.fa-github 
+                                    p https://github.com/deelinnell
+                        .footer-content_right 
+                            p <span>©</span> Portfolio 2023
                 .footer-bottom

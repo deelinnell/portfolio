@@ -1,3 +1,65 @@
+//SCROLL BEHAVIOR
+
+window.onscroll = () => rotateBorder()
+
+function rotateBorder() {
+    if (window.scrollY > 199) {
+        addClosed()
+        addOpen()
+    } else if (window.scrollY < 200) {
+        removeClosed()
+        removeOpen()
+    }
+}
+
+const rotatedBorder = document.querySelector('.fixed-border')
+const bannerImage = document.querySelector('.name-banner_image')
+const bannerPicture = document.querySelector('.name-banner_picture')
+const bubbleText = document.querySelector('.name-banner_speech')
+const profileContent = document.querySelector('.profile-content')
+const profileContentBox = document.querySelector('.profile-content_box')
+const profileArrow = document.querySelector('.profile-content_arrow_background')
+const thumbsUp = document.querySelector('.profile-content_thumbs-up')
+
+function addClosed() {
+    rotatedBorder.classList.add('closed')
+    bannerImage.classList.add('closed')
+    bannerPicture.classList.add('closed')
+    bubbleText.classList.add('closed')
+}
+
+function removeClosed() {
+    rotatedBorder.classList.remove('closed')
+    bannerImage.classList.remove('closed')
+    bannerPicture.classList.remove('closed')
+    bubbleText.classList.remove('closed')
+}
+
+function addOpen() {
+    profileContent.classList.add('open')
+    profileContentBox.classList.add('open')
+    profileArrow.classList.add('open')
+    thumbsUp.classList.add('open')
+}
+
+function removeOpen() {
+    profileContent.classList.remove('open')
+    profileContentBox.classList.remove('open')
+    profileArrow.classList.remove('open')
+    thumbsUp.classList.remove('open')
+}
+
+function animateImage() {
+    addClosed()
+    setTimeout(() => {
+        removeClosed()
+    }, "1")
+}
+
+animateImage()
+
+//PROJECT HOVERS
+
 const projects = document.querySelectorAll('.project-link')
 const codeLinks = document.querySelectorAll('.code-link')
 const projectLinks = []
@@ -483,8 +545,8 @@ talentsContainer.onmouseenter = function () {
 
         titleGold.style.backgroundSize = '100% 0%'
         titleGreen.style.backgroundSize = '100% 0%'
-        talentsTitle.style.top = '32px'
-        titleGreen.style.top = '32px'
-        titleGold.style.top = '32px'
+        talentsTitle.style.top = '26px'
+        titleGreen.style.top = '26px'
+        titleGold.style.top = '26px'
     }, "5500")
 }
