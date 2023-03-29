@@ -456,10 +456,12 @@ a {
 
 @keyframes nameFrontEndLoad {
     0% {
+        opacity: 0;
         top: -230px;
     }
     100% {
         top: 0;
+        opacity: 1;
     }
 }
 
@@ -526,7 +528,6 @@ a {
 }
 
 @keyframes nameBannerTitleLoad {
-
     0% {
         opacity: 0;
         bottom: 200px;
@@ -597,6 +598,7 @@ a {
 
 .name-banner_image-container {
     position: absolute;
+    background-color: #000;
     left: -40px;
     top: 57px;
     width: 500px;

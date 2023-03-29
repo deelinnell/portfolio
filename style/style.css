@@ -543,10 +543,12 @@ a {
 
 @keyframes nameFrontEndLoad {
   0% {
+    opacity: 0;
     top: -230px;
   }
   100% {
     top: 0;
+    opacity: 1;
   }
 }
 .neon-text {
@@ -1005,6 +1007,7 @@ a {
 
 .name-banner_image-container {
   position: absolute;
+  background-color: #000;
   left: -40px;
   top: 57px;
   width: 500px;
@@ -4031,7 +4034,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(2px, 0px);
+    transform: translate(-3px, -21px);
   }
   73% {
     opacity: 1;
