@@ -532,6 +532,14 @@ a {
   left: 31%;
 }
 
+@keyframes nameBannerLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .neon-text {
   font-size: 52pt;
   font-family: "Mr Dafoe";
@@ -664,6 +672,7 @@ a {
   -webkit-text-stroke: 2px #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: nameBannerLoad 1s;
 }
 
 .front-end_stroke {
@@ -805,6 +814,7 @@ a {
   width: 450px;
   right: 4%;
   bottom: 35px;
+  animation: nameBannerLoad 1s;
 }
 
 .name-banner_fill-title {
@@ -3989,7 +3999,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(-10px, 7px);
+    transform: translate(-21px, 27px);
   }
   73% {
     opacity: 1;
