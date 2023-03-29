@@ -994,7 +994,7 @@ a {
   height: 100%;
   width: 100%;
   animation: rainbowTrees 8s infinite;
-  filter: hue-rotate(200deg) saturate(4);
+  filter: hue-rotate(210deg) saturate(4);
   border-radius: 25px;
 }
 
@@ -3986,7 +3986,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(6px, -16px);
+    transform: translate(7px, 17px);
   }
   73% {
     opacity: 1;
