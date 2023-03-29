@@ -536,8 +536,8 @@ talentsContainer.onmouseenter = function () {
 
         titleGold.style.backgroundSize = '100% 0%'
         titleGreen.style.backgroundSize = '100% 0%'
-        talentsTitle.style.top = '26px'
-        titleGreen.style.top = '26px'
-        titleGold.style.top = '26px'
+        talentsTitle.style.top = '30px'
+        titleGreen.style.top = '30px'
+        titleGold.style.top = '30px'
     }, "5500")
 }
