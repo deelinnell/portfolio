@@ -123,14 +123,32 @@ html(lang="en")
                         p.arrow ⟱
                 .container-projects
                     .project
-                        #bitburner_tab.tab-background
-                            .project-tab View Scripts
-                        a#bitburner.project-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
-                            #bitburner_hover
-                            .project-trans-box
-                                #rain_box
-                                p#bitburner_title.project-title Bitburner Scripts
-                        a#bitburner_code.code-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
+                        #draft_tool_tab.tab-background
+                            .project-tab View Project
+                        a#draft_tool.project-link(href="https://deelinnell.github.io/league-of-legends_drafting-tool/", target="_blank")
+                            #draft_tool_trans.project-trans-box
+                                .jinx-tags
+                                    .jinx-boom
+                                    .jinx-grumpy
+                                    .jinx-ha_ha
+                                    .jinx-ha
+                                    .jinx-hour_glass
+                                    .jinx-hour_glass_2
+                                    .jinx-lines
+                                    .jinx-monkey_face
+                                    .jinx-monkey
+                                    .jinx-name
+                                    .jinx-smiley
+                                    .jinx-star
+                                    .jinx-x
+                                p#draft_tool_title.project-title LoL Draft Tool
+                            .jinx-silhouette
+                            .jinx-was_here
+                            .jinx-pink-paint
+                            .jinx-pink-paint_small
+                            .jinx-foreground
+                            #draft_tool_title_pink.project-title LoL Draft Tool
+                        a#draft_tool_code.code-link(href="https://github.com/deelinnell/league-of-legends_drafting-tool", target="_blank")
                             - for (let i = 0; i < 35; i++)
                                 .cell
                             .code-trans-box
@@ -188,6 +206,34 @@ html(lang="en")
                         .code-tab-background
                             .code-tab View Code
                     .project
+                        #card_maker_tab.tab-background
+                            .project-tab View Project
+                        a#card_maker.project-link(href="https://deelinnell.github.io/pokemon-card-maker/", target="_blank")
+                            #card_maker_trans.project-trans-box
+                                p#card_maker_title.project-title Card Maker
+                                .card_maker_background
+                                    - const rainDrops = 75
+                                    #cloud_rain_box
+                                        - for (let r = 0; r < rainDrops; r++)
+                                            svg.rain(style=`--x: ${Math.floor(Math.random() * 95)}; --t: ${Math.floor(Math.random() * 25)}; --a: ${Math.random() + 0.5}; --s: ${Math.random()};`)
+                                                defs
+                                                    linearGradient#rain_gradient(gradientTransform="rotate(90)")
+                                                        stop(offset="30%", stop-color="hsla(189, 27%, 44%, 0.1)")
+                                                        stop(offset="90%", stop-color="hsla(189, 27%, 44%, 0.3)")
+                                                path.rain-drop(d="M15 3 Q16.5 6.8 20 25 A2.8 2.8 0 1 1 10 26 Q13.5 6.8 15 3z")
+                                    #cloud_1
+                                    #cloud_2
+                                    p#card_maker_title_2.project-title Card Maker
+                        a#card_maker_code.code-link(href="https://github.com/deelinnell/pokemon-card-maker", target="_blank")
+                            - for (let i = 0; i < 35; i++)
+                                .cell
+                            .code-trans-box
+                                - for (let i = 0; i < 6; i++)
+                                    p.code-text CODE
+                                p.code-title.code-text CODE
+                        .code-tab-background
+                            .code-tab View Code
+                    .project
                         #solitaire_tab.tab-background
                             .project-tab View Project
                         a#solitaire.project-link(href="https://deelinnell.github.io/solitaire/", target="_blank")
@@ -217,25 +263,14 @@ html(lang="en")
                         .code-tab-background
                             .code-tab View Code
                     .project
-                        #card_maker_tab.tab-background
-                            .project-tab View Project
-                        a#card_maker.project-link(href="https://deelinnell.github.io/pokemon-card-maker/", target="_blank")
-                            #card_maker_trans.project-trans-box
-                                p#card_maker_title.project-title Card Maker
-                                .card_maker_background
-                                    - const rainDrops = 75
-                                    #cloud_rain_box
-                                        - for (let r = 0; r < rainDrops; r++)
-                                            svg.rain(style=`--x: ${Math.floor(Math.random() * 95)}; --t: ${Math.floor(Math.random() * 25)}; --a: ${Math.random() + 0.5}; --s: ${Math.random()};`)
-                                                defs
-                                                    linearGradient#rain_gradient(gradientTransform="rotate(90)")
-                                                        stop(offset="30%", stop-color="hsla(189, 27%, 44%, 0.1)")
-                                                        stop(offset="90%", stop-color="hsla(189, 27%, 44%, 0.3)")
-                                                path.rain-drop(d="M15 3 Q16.5 6.8 20 25 A2.8 2.8 0 1 1 10 26 Q13.5 6.8 15 3z")
-                                    #cloud_1
-                                    #cloud_2
-                                    p#card_maker_title_2.project-title Card Maker
-                        a#card_maker_code.code-link(href="https://github.com/deelinnell/pokemon-card-maker", target="_blank")
+                        #bitburner_tab.tab-background
+                            .project-tab View Scripts
+                        a#bitburner.project-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
+                            #bitburner_hover
+                            .project-trans-box
+                                #rain_box
+                                p#bitburner_title.project-title Bitburner Scripts
+                        a#bitburner_code.code-link(href="https://github.com/deelinnell/my-bitburner-scripts", target="_blank")
                             - for (let i = 0; i < 35; i++)
                                 .cell
                             .code-trans-box
