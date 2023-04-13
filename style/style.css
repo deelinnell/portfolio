@@ -2857,6 +2857,7 @@ p.eyes.righteye {
 
 /* DRAFT TOOL */
 #draft_tool {
+  position: absolute;
   background-image: url("../img/draft_tool.png");
 }
 
@@ -3072,100 +3073,9 @@ p.eyes.righteye {
   height: 50px;
 }
 
-.jinx-foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  transition: 1s;
-}
-
-#draft_tool:hover .jinx-foreground {
-  animation: jinxHover 12s linear;
-}
-
 .jinx-silhouette,
 .jinx-was_here,
 #draft_tool_title_pink {
-  opacity: 0;
-}
-
-#draft_tool:hover .jinx-silhouette,
-#draft_tool:hover .jinx-was_here,
-#draft_tool:hover #draft_tool_title_pink {
-  opacity: 1;
-  transition-delay: 11.5s;
-}
-
-#draft_tool_title_pink {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  -webkit-text-fill-color: #b5438e;
-  font-size: 24pt;
-  font-weight: bold;
-}
-
-.jinx-pink-paint {
-  opacity: 1;
-  position: absolute;
-  z-index: 930;
-  top: 60px;
-  right: 28%;
-  rotate: -5deg;
-  background-image: url("../img/jinx-pink-paint.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  width: 0px;
-  height: 50px;
-}
-
-.jinx-pink-paint_small {
-  opacity: 1;
-  position: absolute;
-  z-index: 940;
-  top: 50px;
-  left: 32%;
-  rotate: 10deg;
-  background-image: url("../img/jinx-pink-paint_small.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  width: 0px;
-  height: 50px;
-}
-
-#draft_tool:hover .jinx-pink-paint {
-  width: 300px;
-  animation: pinkPaint 12s linear;
-  opacity: 0;
-}
-
-@keyframes pinkPaint {
-  0% {
-    opacity: 1;
-    width: 0px;
-  }
-  57% {
-    width: 0px;
-  }
-  76% {
-    width: 300px;
-  }
-  98% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-}
-#draft_tool:hover .jinx-pink-paint_small {
-  width: 200px;
-  animation: pinkPaintSmall 12s linear;
   opacity: 0;
 }
 
@@ -3354,6 +3264,39 @@ p.eyes.righteye {
     background-position: 50%;
   }
 }
+.draft-tool_hover-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+
+.draft-tool_hover {
+  position: relative;
+  flex: 1;
+  z-index: 999;
+}
+
+#jinx-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  transition: 0.3s;
+}
+
+#draft_tool:hover #jinx-foreground {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 10%, black 12%);
+  background-size: 200% 200%;
+  background-position: 50% 10%;
+}
+
 /* FULLPAGE */
 #fullpage {
   background-image: url("../img/fullpage.png");
@@ -4605,7 +4548,7 @@ p.eyes.righteye {
   }
   72% {
     opacity: 0;
-    transform: translate(-1px, -21px);
+    transform: translate(-22px, -3px);
   }
   73% {
     opacity: 1;

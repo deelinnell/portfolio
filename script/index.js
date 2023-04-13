@@ -96,6 +96,20 @@ function removeHover(textBox, label, project) {
     }
 }
 
+// LoL DRAFT TOOL
+
+const draftTool = document.getElementById('draft_tool')
+const draftToolForeground = document.getElementById('jinx-foreground')
+const draftToolHover = document.querySelector('.draft-tool_hover-container')
+let draftToolHoverValue = ''
+
+
+for (let i = 0; i < draftToolHover.children.length; i++) {
+    draftToolHover.children[i].onmouseover = () => {
+        draftToolHoverValue = i
+        draftToolForeground.style.backgroundPosition = 100 - '8.333' * draftToolHoverValue + '%'
+    }
+}
 
 //BITBURNER
 

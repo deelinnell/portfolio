@@ -146,8 +146,11 @@ html(lang="en")
                             .jinx-was_here
                             .jinx-pink-paint
                             .jinx-pink-paint_small
-                            .jinx-foreground
+                            #jinx-foreground
                             #draft_tool_title_pink.project-title LoL Draft Tool
+                            .draft-tool_hover-container
+                                - for (let i = 0; i < 12; i++)
+                                    .draft-tool_hover
                         a#draft_tool_code.code-link(href="https://github.com/deelinnell/league-of-legends_drafting-tool", target="_blank")
                             - for (let i = 0; i < 35; i++)
                                 .cell
